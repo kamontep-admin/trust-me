@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 170" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Trust Me</title>
+  <desc id="logo-description">Trust Me, Value Your Purchase</desc>
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4caed0" />
+      <stop offset="0.48" stop-color="#4caed0" />
+      <stop offset="0.52" stop-color="#9bc847" />
+      <stop offset="1" stop-color="#9bc847" />
+    </linearGradient>
+  </defs>
+  <path d="M82 9C60 10 34 17 17 28v49c0 34 26 62 65 82 39-20 65-48 65-82V28C130 17 104 10 82 9Z" fill="none" stroke="url(#shield)" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+  <text x="22" y="119" fill="#fff" stroke="#4caed0" stroke-linejoin="round" stroke-width="9" paint-order="stroke" font-family="Arial,sans-serif" font-size="98" font-weight="700">T</text>
+  <text x="69" y="124" fill="#fff" stroke="#9bc847" stroke-linejoin="round" stroke-width="8" paint-order="stroke" font-family="Arial,sans-serif" font-size="88" font-weight="700">M</text>
+  <text x="174" y="86" fill="#202020" font-family="Prompt,Arial,sans-serif" font-size="58" font-weight="400">Trust Me</text>
+  <text x="180" y="121" fill="#202020" font-family="Prompt,Arial,sans-serif" font-size="24" font-weight="400">Value Your Purchase</text>
+</svg>
