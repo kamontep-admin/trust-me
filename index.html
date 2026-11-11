@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUST ME | Smart Shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo" aria-label="Trust Me - หน้าแรก">
+        <img class="brand-logo" src="assets/trust-me-logo.svg" alt="Trust Me, Value Your Purchase">
+    </a>
+
+    <nav>
+        <a class="active" href="index.html">หน้าแรก</a>
+        <a href="evaluate.html">ค้นหาสินค้า</a>
+        <a href="dashboard.html">แดชบอร์ด</a>
+        <a href="login.html">เข้าสู่ระบบ</a>
+        <a href="register.html" class="btn btn-primary">สมัครสมาชิก</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="tag">✦ SMART SHOPPING COMPANION</span>
+
+        <h1>
+            ช้อปให้ฉลาด<br>
+            เลือกให้ <span>คุ้มค่า</span>
+        </h1>
+
+        <p>
+            ไม่ต้องลังเลก่อนจ่ายอีกต่อไป TRUST ME
+            ช่วยให้คุณค้นหาและเปรียบเทียบสินค้า
+            เพื่อประกอบการตัดสินใจซื้อได้ง่ายขึ้น
+        </p>
+
+        <form class="search-box" onsubmit="searchHome(event)">
+            <input id="homeSearch" type="text"
+                   placeholder="ค้นหาสินค้าที่คุณสนใจ...">
+            <button class="btn btn-primary">ค้นหา →</button>
+        </form>
+
+        <div class="hero-note">
+            ✓ เลือกอย่างฉลาด จ่ายอย่างคุ้มค่า
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="circle-bg"></div>
+
+        <div class="floating-card">
+            <div class="score-label">TRUST SCORE</div>
+            <div class="score-circle">
+                <strong>92%</strong>
+                <small>VALUE SCORE</small>
+            </div>
+            <h3>คุ้มค่าน่าซื้อ!</h3>
+            <p>ตัวอย่างคะแนนความคุ้มค่า</p>
+            <div class="product-mini">
+                <span>🎧</span>
+                <div>
+                    <b>หูฟังไร้สาย</b>
+                    <small>สินค้าตัวอย่าง</small>
+                </div>
+                <strong>฿599</strong>
+            </div>
+        </div>
+
+        <div class="float-label label-one">✦ ช้อปอย่างมั่นใจ</div>
+        <div class="float-label label-two">♡ เปรียบเทียบได้ง่าย</div>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <span class="tag">EXPLORE CATEGORY</span>
+                <h2>เลือกดูตามหมวดหมู่</h2>
+                <p>ค้นหาสินค้าตามประเภทที่คุณสนใจ</p>
+            </div>
+        </div>
+
+        <div class="category-grid">
+            <a href="evaluate.html?category=อุปกรณ์ไอที"
+               class="category-card purple">
+                <span>🎧</span>
+                <h3>อุปกรณ์ไอที</h3>
+                <small>Gadget & Technology</small>
+            </a>
+
+            <a href="evaluate.html?category=ไลฟ์สไตล์"
+               class="category-card pink">
+                <span>🎒</span>
+                <h3>ไลฟ์สไตล์</h3>
+                <small>Everyday Essentials</small>
+            </a>
+
+            <a href="evaluate.html" class="category-card yellow">
+                <span>✨</span>
+                <h3>สินค้าน่าใช้</h3>
+                <small>Worth Checking</small>
+            </a>
+
+            <a href="evaluate.html" class="category-card green">
+                <span>🛍️</span>
+                <h3>สินค้าทั้งหมด</h3>
+                <small>Explore All Products</small>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-heading">
+            <div>
+                <span class="tag">HANDPICKED FOR YOU</span>
+                <h2>สินค้าน่าสนใจ</h2>
+                <p>ตัวอย่างสินค้าที่มีคะแนนความคุ้มค่าสูง</p>
+            </div>
+            <a href="evaluate.html" class="text-link">ดูทั้งหมด →</a>
+        </div>
+
+        <div class="product-grid" id="homeProducts"></div>
+    </section>
+
+    <section class="how-section">
+        <div>
+            <span class="tag light-tag">HOW IT WORKS</span>
+            <h2>เลือกซื้ออย่างมั่นใจ<br>ใน 3 ขั้นตอน</h2>
+            <p>
+                TRUST ME ช่วยให้การเลือกซื้อสินค้าง่ายขึ้น
+                ด้วยข้อมูลที่ช่วยประกอบการตัดสินใจ
+            </p>
+            <a href="evaluate.html" class="btn btn-white">
+                เริ่มต้นใช้งาน →
+            </a>
+        </div>
+
+        <div class="steps">
+            <div><b>01</b><span>🔍</span><div><strong>ค้นหาสินค้า</strong><small>เลือกสินค้าที่คุณสนใจ</small></div></div>
+            <div><b>02</b><span>📊</span><div><strong>ดูคะแนนความคุ้มค่า</strong><small>ตรวจสอบราคาและรายละเอียด</small></div></div>
+            <div><b>03</b><span>✓</span><div><strong>เปรียบเทียบสินค้า</strong><small>เลือกสิ่งที่เหมาะกับคุณ</small></div></div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="logo" aria-label="Trust Me - หน้าแรก">
+        <img class="brand-logo" src="assets/trust-me-logo.svg" alt="Trust Me, Value Your Purchase">
+    </a>
+    <p>เลือกอย่างฉลาด จ่ายอย่างคุ้มค่า</p>
+    <small>© 2026 TRUST ME</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

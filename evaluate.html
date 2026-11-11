@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ค้นหาสินค้า | TRUST ME</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo" aria-label="Trust Me - หน้าแรก">
+        <img class="brand-logo" src="assets/trust-me-logo.svg" alt="Trust Me, Value Your Purchase">
+    </a>
+
+    <nav>
+        <a href="index.html">หน้าแรก</a>
+        <a class="active" href="evaluate.html">ค้นหาสินค้า</a>
+        <a href="dashboard.html">แดชบอร์ด</a>
+        <a href="login.html">เข้าสู่ระบบ</a>
+    </nav>
+</header>
+
+<main class="container catalog">
+
+    <section class="catalog-hero">
+        <span class="tag light-tag">SMART PRODUCT SEARCH</span>
+        <h1>ค้นหาสินค้าที่ใช่<br>ในราคาที่ <span>คุ้มค่า</span></h1>
+        <p>ค้นหา ดูรายละเอียด และเปรียบเทียบสินค้าก่อนตัดสินใจ</p>
+
+        <div class="catalog-search">
+            <span>⌕</span>
+            <input id="evaluateSearch"
+                   placeholder="ค้นหาชื่อสินค้า...">
+            <button id="searchButton" class="btn btn-primary">
+                ค้นหา
+            </button>
+        </div>
+    </section>
+
+    <section class="catalog-section">
+
+        <div class="catalog-toolbar">
+            <div class="filter-list">
+                <button class="filter active" data-category="ทั้งหมด">ทั้งหมด</button>
+                <button class="filter" data-category="อุปกรณ์ไอที">อุปกรณ์ไอที</button>
+                <button class="filter" data-category="ไลฟ์สไตล์">ไลฟ์สไตล์</button>
+            </div>
+
+            <select id="sortSelect">
+                <option value="recommended">เรียงตามแนะนำ</option>
+                <option value="price-low">ราคาน้อยไปมาก</option>
+                <option value="price-high">ราคามากไปน้อย</option>
+                <option value="score">คะแนนความคุ้มค่า</option>
+            </select>
+        </div>
+
+        <div class="catalog-title">
+            <h2>สินค้าทั้งหมด</h2>
+            <span id="resultCount">พบสินค้า 6 รายการ</span>
+        </div>
+
+        <div class="product-grid" id="evaluateProducts"></div>
+
+    </section>
+
+    <div class="compare-bar">
+        <div>
+            <b>⚖️ เปรียบเทียบสินค้า</b>
+            <small id="compareCount">เลือกสินค้าอย่างน้อย 2 รายการ</small>
+        </div>
+
+        <div id="comparePills" class="compare-pills"></div>
+
+        <button id="compareNow" class="btn btn-primary" disabled>
+            เปรียบเทียบ →
+        </button>
+    </div>
+
+</main>
+
+<div class="modal-backdrop" id="productModal">
+    <div class="modal">
+        <button class="modal-close" data-close="productModal">×</button>
+        <div id="productModalContent"></div>
+    </div>
+</div>
+
+<div class="modal-backdrop" id="compareModal">
+    <div class="modal modal-wide">
+        <button class="modal-close" data-close="compareModal">×</button>
+        <div id="compareModalContent"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="index.html" class="logo" aria-label="Trust Me - หน้าแรก">
+        <img class="brand-logo" src="assets/trust-me-logo.svg" alt="Trust Me, Value Your Purchase">
+    </a>
+    <small>© 2026 TRUST ME</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

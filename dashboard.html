@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TRUST ME</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<aside class="sidebar">
+    <a href="index.html" class="logo" aria-label="Trust Me - หน้าแรก">
+        <img class="brand-logo" src="assets/trust-me-logo.svg" alt="Trust Me, Value Your Purchase">
+    </a>
+
+    <small class="side-heading">WORKSPACE</small>
+    <a class="side-link selected" href="dashboard.html">▦ ภาพรวม</a>
+    <a class="side-link" href="evaluate.html">⌕ ค้นหาสินค้า</a>
+
+    <small class="side-heading">ACCOUNT</small>
+    <a class="side-link" href="index.html">⌂ กลับหน้าเว็บไซต์</a>
+    <button class="side-link" onclick="logout()">↪ ออกจากระบบ</button>
+
+    <div class="sidebar-tip">
+        💡 เคล็ดลับวันนี้
+        <p>อย่าดูแค่ราคาถูกที่สุด ลองเปรียบเทียบคุณภาพและการใช้งานด้วยนะ</p>
+    </div>
+</aside>
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+        <div>
+            <span class="tag">YOUR PERSONAL SPACE</span>
+            <h1>ภาพรวมของคุณ</h1>
+            <p>จัดการการค้นหาและดูสินค้าที่น่าสนใจ</p>
+        </div>
+
+        <div class="user-profile">
+            <span>☺</span>
+            <div>
+                <strong id="userName">ผู้ใช้งาน</strong>
+                <small>TRUST ME MEMBER</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard-hero">
+        <div>
+            <span class="tag light-tag">WELCOME TO TRUST ME</span>
+            <h2>สวัสดี, <span id="welcomeName">นักช้อป</span> 👋</h2>
+            <p>วันนี้มีสินค้าอะไรที่คุณอยากเลือกให้คุ้มค่าบ้าง?</p>
+            <a href="evaluate.html" class="btn btn-white">
+                ค้นหาสินค้าเลย →
+            </a>
+        </div>
+        <div class="dashboard-emoji">🛍️</div>
+    </section>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <span>🛍️</span>
+            <small>สินค้าตัวอย่างในระบบ</small>
+            <h2>06</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>📊</span>
+            <small>คะแนนสูงสุด</small>
+            <h2>92%</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>✨</span>
+            <small>หมวดหมู่สินค้า</small>
+            <h2>02</h2>
+        </div>
+    </section>
+
+    <section class="dashboard-grid">
+
+        <div class="panel">
+            <div class="panel-heading">
+                <h3>สินค้าแนะนำ</h3>
+                <a href="evaluate.html">ดูทั้งหมด →</a>
+            </div>
+            <div id="dashboardProducts"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <h3>เริ่มต้นใช้งาน</h3>
+            </div>
+
+            <div class="guide-item">
+                <span>01</span>
+                <div><b>ค้นหาสินค้า</b><small>ค้นหาสินค้าที่คุณสนใจ</small></div>
+            </div>
+
+            <div class="guide-item">
+                <span>02</span>
+                <div><b>ดูรายละเอียด</b><small>ตรวจสอบข้อมูลและราคา</small></div>
+            </div>
+
+            <div class="guide-item">
+                <span>03</span>
+                <div><b>เปรียบเทียบ</b><small>เลือกสินค้าที่เหมาะสม</small></div>
+            </div>
+
+            <a href="evaluate.html" class="btn btn-primary full-btn">
+                ไปยังหน้าค้นหาสินค้า →
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
