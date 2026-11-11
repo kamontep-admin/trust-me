@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TRUST ME</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">💜 TRUST ME</a>
+    <nav>
+        <a href="dashboard.html">หน้าหลัก</a>
+        <a href="evaluate.html">วิเคราะห์สินค้า</a>
+        <button class="logout-btn" onclick="logout()">ออกจากระบบ</button>
+    </nav>
+</header>
+
+<main class="container dashboard">
+    <section class="welcome">
+        <h1>สวัสดี, <span id="userName">ผู้ใช้งาน</span> 👋</h1>
+        <p>ยินดีต้อนรับสู่พื้นที่เลือกซื้อสินค้าอย่างคุ้มค่า</p>
+    </section>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <h3>🛍️</h3>
+            <p>สินค้าที่แนะนำ</p>
+            <h2>6 รายการ</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>📊</h3>
+            <p>ระบบวิเคราะห์</p>
+            <h2>พร้อมใช้งาน</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>💜</h3>
+            <p>สมาชิก</p>
+            <h2>TRUST ME</h2>
+        </div>
+    </section>
+
+    <section class="dashboard-action">
+        <h2>เริ่มต้นใช้งาน</h2>
+        <p>ค้นหาและเปรียบเทียบสินค้าก่อนตัดสินใจซื้อ</p>
+        <a href="evaluate.html" class="action-btn">
+            เริ่มวิเคราะห์สินค้า →
+        </a>
+    </section>
+
+    <section>
+        <h2>💡 คำแนะนำสำหรับคุณ</h2>
+        <div class="tip-card">
+            อย่าพิจารณาเพียงราคาที่ถูกที่สุด ควรดูคุณภาพ
+            คุณสมบัติ และอายุการใช้งานควบคู่กันด้วย
+        </div>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
