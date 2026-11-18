@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101d2b">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <title>เข้าสู่ระบบ | TRUST ME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#142333;--muted:#788794;--mint:#b9f2d0;--mint-dark:#1c7654;--line:#e8edf0;--paper:#fff;--bg:#f3f6f5}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'Prompt',sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}.page{min-height:100vh;display:grid;grid-template-columns:minmax(390px, .92fr) 1.08fr}
+    .visual{background:#101d2b;color:#fff;position:relative;overflow:hidden;padding:42px clamp(30px,6vw,90px);display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}
+    .visual:before{content:'';position:absolute;width:570px;height:570px;border:1px solid #ffffff12;border-radius:50%;right:-210px;top:13%;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}
+    .visual:after{content:'';position:absolute;width:340px;height:340px;background:#b9f2d012;filter:blur(70px);border-radius:50%;left:-130px;bottom:5%}
+    .brand{position:relative;z-index:1;display:inline-flex;align-items:center;width:max-content}.brand img{width:174px;height:auto;filter:brightness(0) invert(1)}
+    .visual-main{position:relative;z-index:1;max-width:540px;margin:55px 0}.eyebrow{font-size:11px;letter-spacing:2.5px;color:var(--mint);font-weight:600}.visual h1{font-size:clamp(35px,4.2vw,57px);line-height:1.35;letter-spacing:-1.5px;margin:20px 0}.visual h1 span{color:var(--mint)}
+    .visual-main p{color:#b8c4cd;font-size:14px;line-height:2;max-width:410px}.feature{display:flex;align-items:center;gap:14px;margin-top:34px}.feature-icon{width:42px;height:42px;border-radius:13px;background:#ffffff12;display:grid;place-items:center;color:var(--mint);font-size:19px}.feature b{display:block;font-size:12px;font-weight:500}.feature small{display:block;color:#9eacb7;font-size:10px;margin-top:3px}
+    .visual-foot{position:relative;z-index:1;color:#84939e;font-size:10px;letter-spacing:.4px}
+    .content{display:grid;place-items:center;padding:45px 28px;position:relative}.top-link{position:absolute;right:clamp(24px,5vw,70px);top:36px;font-size:12px;color:#6d7c87}.top-link:hover{color:var(--mint-dark)}
+    .login{width:min(100%,420px);margin:35px auto 0}.mobile-brand{display:none}.step{display:flex;align-items:center;gap:9px;color:#799087;font-size:10px;letter-spacing:1.8px;font-weight:600}.step:before{content:'';width:24px;height:2px;background:#5bb88b;border-radius:5px}
+    h2{font-size:34px;letter-spacing:-.8px;margin:17px 0 5px}.intro{font-size:12px;color:var(--muted);margin:0 0 35px}.field{margin:19px 0}.field-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.field label{font-size:12px;font-weight:600}.field input{width:100%;height:54px;border:1px solid var(--line);border-radius:13px;padding:0 16px;font:12px 'Prompt',sans-serif;color:var(--ink);background:#fff;outline:none;transition:.2s}.field input::placeholder{color:#b1bbc2}.field input:focus{border-color:#64bd91;box-shadow:0 0 0 4px #64bd911c}.password-wrap{position:relative}.password-wrap input{padding-right:75px}.show-pass{position:absolute;right:13px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#668274;font:11px 'Prompt',sans-serif;cursor:pointer;padding:7px}
+    .form-options{display:flex;justify-content:space-between;align-items:center;margin:7px 0 25px;font-size:11px;color:#7d8a93}.remember{display:flex;align-items:center;gap:8px;cursor:pointer}.remember input{accent-color:#318b65;width:14px;height:14px}.forgot{color:#287b59;font-weight:500}.submit{width:100%;height:55px;border:0;border-radius:13px;background:#142b37;color:#fff;font:600 13px 'Prompt',sans-serif;cursor:pointer;transition:.2s;box-shadow:0 10px 22px #142b371c}.submit:hover{background:#1d7655;transform:translateY(-2px);box-shadow:0 13px 25px #1d76552b}.submit span{margin-left:9px;color:var(--mint)}
+    .signup{margin:26px 0;text-align:center;color:#85919a;font-size:11px}.signup a{color:#237b57;font-weight:600;margin-left:4px}.divider{display:flex;align-items:center;gap:14px;color:#a3adb4;font-size:10px;margin:27px 0}.divider:before,.divider:after{content:'';height:1px;background:var(--line);flex:1}.secure-note{display:flex;justify-content:center;align-items:center;gap:7px;color:#9aa5ac;font-size:10px}.secure-note span{color:#4a9a70;font-size:13px}
+    @media(max-width:850px){.page{grid-template-columns:1fr}.visual{display:none}.content{min-height:100vh;padding:35px 24px}.top-link{top:25px;right:24px}.login{margin:55px auto 0}.mobile-brand{display:block;margin-bottom:45px}.mobile-brand img{width:150px;height:auto}}
+    @media(max-width:420px){.content{padding:25px 20px}.login{margin-top:55px}h2{font-size:30px}.intro{margin-bottom:28px}.top-link{font-size:11px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="visual" aria-label="เกี่ยวกับ TRUST ME">
+      <a class="brand" href="index.html" aria-label="TRUST ME หน้าแรก"><img src="assets/trust-me-logo.svg" alt="TRUST ME"></a>
+      <div class="visual-main">
+        <div class="eyebrow">MAKE EVERY CHOICE COUNT</div>
+        <h1>เลือกให้ฉลาด<br>มั่นใจกับทุก<span>การซื้อ</span></h1>
+        <p>พื้นที่ช่วยคิดก่อนตัดสินใจ เปรียบเทียบข้อมูลสินค้าและค้นหาตัวเลือกที่คุ้มค่ากับคุณมากที่สุด</p>
+        <div class="feature"><div class="feature-icon">⌕</div><div><b>ตัดสินใจบนข้อมูลที่ชัดเจน</b><small>เปรียบเทียบก่อนเลือกซื้ออย่างมั่นใจ</small></div></div>
+        <div class="feature"><div class="feature-icon">✓</div><div><b>ทุกการเลือกมีเหตุผล</b><small>ช้อปอย่างคุ้มค่าในแบบของคุณ</small></div></div>
+      </div>
+      <div class="visual-foot">TRUST ME · VALUE YOUR PURCHASE</div>
+    </section>
+    <section class="content">
+      <a class="top-link" href="index.html">กลับสู่หน้าแรก ↗</a>
+      <div class="login">
+        <a class="mobile-brand" href="index.html"><img src="assets/trust-me-logo.svg" alt="TRUST ME"></a>
+        <div class="step">YOUR ACCOUNT</div>
+        <h2>ยินดีต้อนรับ</h2>
+        <p class="intro">เข้าสู่ระบบเพื่อใช้งาน TRUST ME ต่อได้เลย</p>
+        <form id="loginForm">
+          <div class="field"><div class="field-head"><label for="loginEmail">อีเมล</label></div><input id="loginEmail" type="email" placeholder="กรอกอีเมลของคุณ" autocomplete="username" required></div>
+          <div class="field"><div class="field-head"><label for="loginPassword">รหัสผ่าน</label></div><div class="password-wrap"><input id="loginPassword" type="password" placeholder="กรอกรหัสผ่าน" autocomplete="current-password" required><button class="show-pass" type="button" id="togglePassword" aria-label="แสดงรหัสผ่าน">แสดง</button></div></div>
+          <div class="form-options"><label class="remember"><input type="checkbox" id="rememberMe"> จดจำฉันไว้</label><a class="forgot" href="mailto:support@trustme.local?subject=ขอความช่วยเหลือเรื่องบัญชี">ลืมรหัสผ่าน?</a></div>
+          <button class="submit" type="submit">เข้าสู่ระบบ <span>→</span></button>
+        </form>
+        <div class="signup">ยังไม่มีบัญชีใช่ไหม? <a href="register.html">สมัครสมาชิก</a></div>
+        <div class="divider">TRUST ME MEMBER</div>
+        <div class="secure-note"><span>●</span> พื้นที่สมาชิกสำหรับการใช้งาน TRUST ME</div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const passwordInput = document.getElementById('loginPassword');
+    const togglePassword = document.getElementById('togglePassword');
+    togglePassword.addEventListener('click', () => {
+      const showing = passwordInput.type === 'text';
+      passwordInput.type = showing ? 'password' : 'text';
+      togglePassword.textContent = showing ? 'แสดง' : 'ซ่อน';
+      togglePassword.setAttribute('aria-label', showing ? 'แสดงรหัสผ่าน' : 'ซ่อนรหัสผ่าน');
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

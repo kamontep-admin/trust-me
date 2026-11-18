@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101d2b">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <title>สมัครสมาชิก | TRUST ME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#142333;--muted:#788794;--mint:#b9f2d0;--mint-dark:#1c7654;--line:#e8edf0;--paper:#fff;--bg:#f3f6f5}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'Prompt',sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:inherit;text-decoration:none}.page{min-height:100vh;display:grid;grid-template-columns:minmax(390px,.92fr) 1.08fr}
+    .visual{background:#101d2b;color:#fff;position:relative;overflow:hidden;padding:42px clamp(30px,6vw,90px);display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}
+    .visual:before{content:'';position:absolute;width:570px;height:570px;border:1px solid #ffffff12;border-radius:50%;right:-210px;top:13%;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}
+    .visual:after{content:'';position:absolute;width:340px;height:340px;background:#b9f2d012;filter:blur(70px);border-radius:50%;left:-130px;bottom:5%}
+    .brand{position:relative;z-index:1;display:inline-flex;align-items:center;width:max-content}.brand img{width:174px;height:auto;filter:brightness(0) invert(1)}
+    .visual-main{position:relative;z-index:1;max-width:540px;margin:55px 0}.eyebrow{font-size:11px;letter-spacing:2.5px;color:var(--mint);font-weight:600}
+    .visual h1{font-size:clamp(35px,4.2vw,57px);line-height:1.35;letter-spacing:-1.5px;margin:20px 0}.visual h1 span{color:var(--mint)}
+    .visual-main p{color:#b8c4cd;font-size:14px;line-height:2;max-width:410px}
+    .feature{display:flex;align-items:center;gap:14px;margin-top:34px}.feature-icon{width:42px;height:42px;border-radius:13px;background:#ffffff12;display:grid;place-items:center;color:var(--mint);font-size:19px}
+    .feature b{display:block;font-size:12px;font-weight:500}.feature small{display:block;color:#9eacb7;font-size:10px;margin-top:3px}
+    .visual-foot{position:relative;z-index:1;color:#84939e;font-size:10px;letter-spacing:.4px}
+    .content{display:grid;place-items:center;padding:38px 28px;position:relative}.top-link{position:absolute;right:clamp(24px,5vw,70px);top:36px;font-size:12px;color:#6d7c87}.top-link:hover{color:var(--mint-dark)}
+    .register{width:min(100%,440px);margin:30px auto 0}.mobile-brand{display:none}.step{display:flex;align-items:center;gap:9px;color:#799087;font-size:10px;letter-spacing:1.8px;font-weight:600}.step:before{content:'';width:24px;height:2px;background:#5bb88b;border-radius:5px}
+    h2{font-size:34px;letter-spacing:-.8px;margin:16px 0 5px}.intro{font-size:12px;color:var(--muted);margin:0 0 24px}
+    .field{margin:15px 0}.field label{display:block;font-size:12px;font-weight:600;margin-bottom:8px}
+    .field input{width:100%;height:50px;border:1px solid var(--line);border-radius:13px;padding:0 16px;font:12px 'Prompt',sans-serif;color:var(--ink);background:#fff;outline:none;transition:.2s}
+    .field input::placeholder{color:#b1bbc2}.field input:focus{border-color:#64bd91;box-shadow:0 0 0 4px #64bd911c}
+    .password-wrap{position:relative}.password-wrap input{padding-right:74px}.show-pass{position:absolute;right:13px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#668274;font:11px 'Prompt',sans-serif;cursor:pointer;padding:7px}
+    .submit{width:100%;height:54px;border:0;border-radius:13px;background:#142b37;color:#fff;font:600 13px 'Prompt',sans-serif;cursor:pointer;transition:.2s;box-shadow:0 10px 22px #142b371c;margin-top:10px}
+    .submit:hover{background:#1d7655;transform:translateY(-2px);box-shadow:0 13px 25px #1d76552b}.submit span{margin-left:9px;color:var(--mint)}
+    .signup{margin:23px 0;text-align:center;color:#85919a;font-size:11px}.signup a{color:#237b57;font-weight:600;margin-left:4px}
+    .secure-note{display:flex;justify-content:center;align-items:center;gap:7px;color:#9aa5ac;font-size:10px}.secure-note span{color:#4a9a70;font-size:13px}
+    .modal{display:none;position:fixed;inset:0;background:#0f172a99;backdrop-filter:blur(5px);z-index:99;align-items:center;justify-content:center;padding:20px}
+    .modal-card{background:#fff;padding:36px 28px;border-radius:22px;text-align:center;max-width:380px;width:100%;box-shadow:0 20px 50px #0002;animation:pop .25s ease}
+    .check{width:68px;height:68px;background:#dcfce7;color:#168354;border-radius:50%;display:grid;place-items:center;font-size:34px;font-weight:700;margin:0 auto 18px}
+    .modal-card h3{margin:0 0 8px;font-size:22px}.modal-card p{margin:0 0 23px;color:#788794;font-size:12px;line-height:1.8}
+    .modal-link{display:block;background:#142b37;color:#fff;border-radius:12px;padding:13px;font-size:12px;font-weight:600}
+    @keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+    @media(max-width:850px){.page{grid-template-columns:1fr}.visual{display:none}.content{min-height:100vh;padding:35px 24px}.top-link{top:25px;right:24px}.register{margin:48px auto 0}.mobile-brand{display:block;margin-bottom:36px}.mobile-brand img{width:150px;height:auto}}
+    @media(max-width:480px){.content{padding:25px 20px}.register{margin-top:50px}h2{font-size:30px}.intro{margin-bottom:20px}.top-link{font-size:11px}.field{margin:13px 0}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="visual" aria-label="เกี่ยวกับ TRUST ME">
+      <a class="brand" href="index.html" aria-label="TRUST ME หน้าแรก"><img src="assets/trust-me-logo.svg" alt="TRUST ME"></a>
+      <div class="visual-main">
+        <div class="eyebrow">JOIN TRUST ME</div>
+        <h1>เริ่มต้นเลือกซื้อ<br>อย่าง<span>มั่นใจ</span></h1>
+        <p>สร้างบัญชี TRUST ME เพื่อเปรียบเทียบข้อมูลสินค้า ประเมินความคุ้มค่า และเลือกสิ่งที่เหมาะกับคุณได้ง่ายขึ้น</p>
+        <div class="feature"><div class="feature-icon">✦</div><div><b>ทุกการตัดสินใจมีข้อมูลรองรับ</b><small>เริ่มต้นประสบการณ์ช้อปอย่างชาญฉลาด</small></div></div>
+      </div>
+      <div class="visual-foot">TRUST ME · VALUE YOUR PURCHASE</div>
+    </section>
+
+    <section class="content">
+      <a class="top-link" href="index.html">← กลับหน้าแรก</a>
+      <div class="register">
+        <a class="mobile-brand" href="index.html"><img src="assets/trust-me-logo.svg" alt="TRUST ME"></a>
+        <div class="step">CREATE YOUR ACCOUNT</div>
+        <h2>สร้างบัญชีใหม่</h2>
+        <p class="intro">กรอกข้อมูลด้านล่างเพื่อเริ่มใช้งาน TRUST ME</p>
+        <form id="registerForm">
+          <div class="field"><label for="registerName">ชื่อที่ต้องการแสดง</label><input id="registerName" type="text" placeholder="ชื่อของคุณ" autocomplete="name" required></div>
+          <div class="field"><label for="registerEmail">อีเมล</label><input id="registerEmail" type="email" placeholder="name@example.com" autocomplete="email" required></div>
+          <div class="field"><label for="registerPassword">รหัสผ่าน</label><div class="password-wrap"><input id="registerPassword" type="password" placeholder="อย่างน้อย 6 ตัวอักษร" minlength="6" autocomplete="new-password" required><button class="show-pass" type="button" data-toggle="registerPassword">แสดง</button></div></div>
+          <div class="field"><label for="confirmPassword">ยืนยันรหัสผ่าน</label><div class="password-wrap"><input id="confirmPassword" type="password" placeholder="กรอกรหัสผ่านอีกครั้ง" autocomplete="new-password" required><button class="show-pass" type="button" data-toggle="confirmPassword">แสดง</button></div></div>
+          <button type="submit" class="submit">สมัครสมาชิก <span>→</span></button>
+        </form>
+        <div class="signup">มีบัญชีอยู่แล้ว? <a href="login.html">เข้าสู่ระบบ</a></div>
+        <div class="secure-note"><span>✓</span> ข้อมูลของคุณใช้สำหรับการทดลองในโครงงาน</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="successModal" class="modal">
+    <div class="modal-card">
+      <div class="check">✓</div>
+      <h3>สมัครสมาชิกสำเร็จ!</h3>
+      <p>ยินดีต้อนรับสู่ <b>TRUST ME</b><br>บัญชีของคุณพร้อมใช้งานเรียบร้อยแล้ว</p>
+      <a href="login.html" class="modal-link">ไปหน้าเข้าสู่ระบบ →</a>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('[data-toggle]').forEach(button=>{
+      button.addEventListener('click',()=>{
+        const input=document.getElementById(button.dataset.toggle);
+        const visible=input.type==='password';
+        input.type=visible?'text':'password';
+        button.textContent=visible?'ซ่อน':'แสดง';
+      });
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
